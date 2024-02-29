@@ -1,13 +1,28 @@
+"use client"
 import Image from "next/image";
+import { Inter } from 'next/font/google'
+
+import { useState } from "react";
+import { FaInstagram } from "react-icons/fa";
+const inter = Inter({ subsets: ['greek'] })
 
 export default function Home() {
+  const [name, setName] = useState('')
   return (
-    <div className="w-[100vw] h-[100vw] absolute left-0 top-0">
+    <main className={inter.className}>
 
-      <main className="flex min-h-screen flex-col items-center justify-between p-24">
-        Arda Saratas
-        <div className="absolue left-0 bottom-0 h-[300px] w-[400px] bg-slate-800"></div>
-      </main>
-    </div>
+
+      <h1 className="text-[#2f7fdb] font-bold">𝕬𝖗𝖉𝖆 𝕾𝖆𝖗𝖆𝖙𝖆𝖘̧</h1>
+      <p className="text-orange-700">İnstagram</p>
+
+      <div className=" w-28 flex justify-center">
+
+        <a target="_blank" href="https://www.instagram.com/ardasaratas0/" >
+          <FaInstagram size={100} />
+
+        </a>
+      </div>
+
+    </main>
   );
-}
+} 
